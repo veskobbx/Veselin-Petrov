@@ -1,0 +1,195 @@
+@import url(reset.css);
+@import url(fonts.css);
+@import url(font-awesome.css);
+
+body {
+   font-family: 'Gidugu', sans-serif;
+   font-size: 150%; /*<---- Не знам защо след смяната на шрифта, текстът стана по-трудно четим, затова и го уголемих */
+}
+
+.main-header {
+    background: #c2c2c2;
+    padding: 7px 0px 12px;
+    text-align: center; /*nice*/
+    border-radius: 12px;
+    margin: 25px 25px;
+ }
+
+.nav-main {
+	background: #ebebeb;
+    border-radius: 7px;
+    margin: 0px 20px 0px 20px;
+    padding: 10px 0pc 10px;
+    color: #000000;
+}
+
+.adv,
+.adv:last-child, /*двата selector-а, в случая вършат една й съща работа, показвам ти варианти като подход*/
+.adv:nth-child(3) { /*ето как може да се целиш в конкретен номер елемент, в случая, третия елемент*/
+	background: #ffffff;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin: 0 1% 0 1%;
+    float: left;
+    width: 23%;
+    position: relative;
+}
+
+.adv:last-child {
+    float: right;
+    margin-left: 1%;
+    margin-right: auto;
+    position: relative;
+}
+
+.main-content {
+	background: green;
+    float: left;
+    width: 50%;
+    border-radius: 5px; 
+    z-index: 1;
+}
+
+.article-item {
+    background: #ffffff;
+    text-align: center; /*good*/
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px; 
+
+}
+
+.article-item:nth-child(4) {
+    background: #b8e6e3;
+
+}
+/*специално при зебрата това е най-широко използвания похват
+същия принцип се прилага и при други design patterns, които изискват
+частична смяна на външния вид
+идеята е да имаме "transformer" елементи,
+които манипулираме само със CSS според създаден модел на повтаряемост*/
+
+
+.footer-wrap {
+	background: #ebebeb;
+    margin: 20px 20px 20px 20px;
+    text-align: right;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+img {
+    float: left;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Tablets */
+@media only screen and (min-width : 768px) and (max-width : 1223px){
+    .main-header-wrapper .title {
+        width: 60%;
+    }
+
+    .side-block {
+        width: 20%;
+    }
+}
+
+/* Small Desktops and laptops */
+@media only screen and (min-width : 1224px) and (max-width : 1923px) {
+    .main-header-wrapper .title {
+        width: 80%;
+    }
+
+    .side-block {
+        width: 10%;
+    }
+}
+
+/* Large screens */
+@media only screen and (min-width : 1924px) {
+    .main-header-wrapper .title {
+        width: 90%;
+    }
+
+    .side-block {
+        width: 5%;
+    }
+}
+
+.title .icon {
+    position: absolute;
+    display: block;
+    top: 17px;
+    left: 30px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.main-block {
+    display: block;
+    position: fixed;
+    width: 30%;
+    padding: 10px;
+    margin: -30px 0px 0px 880px; /*<---- тук не ми се получи с float, а за друго не се сетих и затова го направих по хамалския начин*/
+    background: green;
+    text-align: center
+    border: 5px solid green;
+    border-radius: 0px 0px 12px 12px;
+    z-index: 1;
+}
+.circle-x {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px; 
+    background: #d64545;
+    float: right;
+    text-align: center;
+    font-size: 1.6em;
+    margin: -5px -5px;
+}
+
+.main-container {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 15%;
+    background: black;
+    border: solid black;
+    top: 85%;
+    color: white;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.weapon-main {
+    width: 100%;
+    border: solid black;
+    float: left;
+    text-align: center;
+    margin: 15px 0px 15px 0px;
+    padding: 10px;
+    border-left: none;
+    border-right: none;
+    display: block;
+    font-size: 2em;
+}
+
+.weapon-image-main {
+    float: left;
+    border: solid grey;
+    width: 24%;
+    margin: 0.5%;
+}
+
+
+    
+
